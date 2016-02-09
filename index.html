@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Stock Market</title>
+
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="main.js"></script>
+	<script src="config.js"></script>
+	<script src="controller.js"></script>
+
+</head>
+<body ng-app="routingTest">
+	<div class="container">
+		<h1>Stock Market Baby</h1>
+
+		<button ui-sref='home' class="btn btn-primary">Home</button>
+		<button ui-sref='list' class="btn btn-primary">List</button>
+		<button ui-sref='add' class="btn btn-primary">Add</button>
+
+		<ui-view></ui-view>
+	</div>
+	
+
+</body>
+</html>
