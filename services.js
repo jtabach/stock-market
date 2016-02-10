@@ -1,5 +1,7 @@
 app.service('Stocks', function($http) {
 
+	this.stockList = []
+
 	this.findByName = function(name) {
 		return $http.jsonp(`http://dev.markitondemand.com/MODApis/Api/v2/Lookup/jsonp?input=${name}&jsoncallback=JSON_CALLBACK`)
 	}
