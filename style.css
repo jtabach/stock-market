@@ -1,31 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 .card {
-	padding: 16px 8px 0px 8px;
+	padding: 12px;
 	color: black;
+	width: 220px;
+	text-align: center;
 }
 
 .card h2 {
-	background: green;
+	background: #333333;
 	margin: 0;
 	padding: 20px;
+	color: #cc5200;
 	text-align: center;
 }
 
 .card h5 {
-	background: orange;
+	background: #404040;
 	margin: 0;
-	height: 100px;
+	height: 60px;
 	padding: 20px;
 	text-align: center;
+	color: #d9d9d9;
 }
 
-.card h4 {
+.card .exchange {
 	margin: 0;
-	padding: 20px;
+	padding: 15px 20px 15px 20px;
 	text-align: center;
-	background: LightSteelBlue;
+	background: #b34700;
+	color: #d9d9d9;
+	height: 46px;
 }
+/*
+.card div {
+	display: inline-block;
+	text-align: center;
+	background-color: gray;
+	height: 60px;
+	width: 220px;
+	padding: 20px;
+}*/
 
 .card:hover {
 	text-decoration: none;
 	cursor: pointer;
+	background: #ccc;
+}
+
+.card img {
+	display: inline-block;
+	width: 196px;
+	height: 80px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: #404040;
 }

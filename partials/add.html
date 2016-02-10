@@ -12,8 +12,9 @@
 	<div class="row" id="anId">
 		<a ng-click="addStock(stock)" ng-model="selectStock" ng-repeat="stock in stocks" class="col-xs-3 card" >
 			<h2>{{stock.Symbol}}</h2>
-			<h5>{{stock.Name}}</h4>
-			<h4>{{stock.Exchange}}</h4>
+			<h5>{{stock.Name}}</h5>
+			<img src="stock3.png" alt="">
+			<h5 class="exchange">{{stock.Exchange}}</h5>
 		</a>
 	</div>
 </div>
