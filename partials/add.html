@@ -1,1 +1,19 @@
 <h1>Add me</h1>
+
+<form class="form-inline">
+  <div class="form-group">
+    <label for="nameStock">Stock:</label>
+    <input type="text" class="form-control" ng-model="nameStock" placeholder="Search for Stock">
+  </div>
+  <button ng-click="findStock()" type="button" class="btn btn-success">Add Stock</button>
+</form>
+
+<div class="container">
+	<div class="row" id="anId">
+		<a ng-click="addStock(stock)" ng-model="selectStock" ng-repeat="stock in stocks" class="col-xs-3 card" >
+			<h2>{{stock.Symbol}}</h2>
+			<h5>{{stock.Name}}</h4>
+			<h4>{{stock.Exchange}}</h4>
+		</a>
+	</div>
+</div>
