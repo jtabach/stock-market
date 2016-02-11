@@ -1,5 +1,32 @@
 <h1>My List!</h1>
 
-<div class="container">
+<!-- <div class="container">
 	<p ng-model="selectStock" ng-repeat="stock in stockList">{{ stock }}</p>
+</div> -->
+
+<div class="container">
+	<div class="row" id="anId">
+		<a ng-click="addStock(stock)" ng-model="selectStock" ng-repeat="stock in stockList" class="col-xs-3 card" id="list" >
+			<h2>{{stock.Symbol}}</h2>
+			<h5>{{stock.Name}}</h5>
+			<img src="stock3.png" alt="">
+			<div class="row open">
+				<div class="col-xs-6">
+					<h6>Open: {{stock.Open}}</h6>
+				</div >
+				<div class="col-xs-6">
+					<h6>Last: {{stock.LastPrice}}</h6>
+				</div >
+			</div>
+			<div class="row open">
+				<div class="col-xs-6">
+					<h6>Low: {{stock.Low}}</h6>
+				</div >
+				<div class="col-xs-6">
+					<h6>High: {{stock.High}}</h6>
+				</div >
+			</div>
+			<button ng-click="removeStock()" type="button" class="btn btn-danger">Remove Stock</button>
+		</a>
+	</div>
 </div>

@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+body {
+	text-align: center;
+}
+
 .card {
 	padding: 12px;
 	color: black;
@@ -35,11 +39,33 @@
 	color: #d9d9d9;
 	height: 46px;
 }
+.card .open {
+	margin: 0;
+	padding: 0px 10px 15px 10px;
+	text-align: center;
+	background: #b34700;
+	color: #d9d9d9;
+	height: 46px;
+}
+
+.card .btn-danger {
+	margin-top: 10px;
+	background-color: #990000;
+}
+
+.card .btn-danger:hover {
+	margin-top: 10px;
+	background-color: #cc0000;
+}
 
 .card:hover {
 	text-decoration: none;
 	cursor: pointer;
 	background: #ccc;
+}
+
+#list:hover {
+	background-color: white !important;
 }
 
 .card img {

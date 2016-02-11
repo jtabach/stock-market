@@ -1,6 +1,11 @@
 app.controller('listCtrl', function($scope, $log, $state, Stocks) {
 	$log.info(Stocks.stockList);
 	$scope.stockList = Stocks.stockList;
+
+	$scope.removeStock = function() {
+		var index = $scope.stockList.indexOf(this.stock)
+		$scope.stockList.splice(index, 1);
+	}
 })
 
 app.controller('addCtrl', function($scope, $log, $state, Stocks) {

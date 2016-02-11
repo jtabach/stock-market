@@ -3,7 +3,7 @@
 <form class="form-inline">
   <div class="form-group">
     <label for="nameStock">Stock:</label>
-    <input type="text" class="form-control" ng-model="nameStock" placeholder="Search for Stock">
+    <input ng-keyup="findStock()" type="text" class="form-control" ng-model="nameStock" placeholder="Search for Stock">
   </div>
   <button ng-click="findStock()" type="button" class="btn btn-success">Add Stock</button>
 </form>
