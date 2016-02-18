@@ -7,7 +7,7 @@
 
 <div class="container">
 	<div class="row" id="anId">
-		<a ng-click="addStock(stock)" ng-model="selectStock" ng-repeat="stock in stockList" class="col-xs-3 card" id="list" >
+		<a ng-click="addStock(stock)" ng-model="selectStock" ng-repeat="stock in stockList track by $index" class="col-xs-3 card" id="list" >
 			<h2>{{stock.Symbol}}</h2>
 			<h5>{{stock.Name}}</h5>
 			<img src="stock3.png" alt="">
@@ -27,7 +27,7 @@
 					<h6>High: {{stock.High}}</h6>
 				</div >
 			</div>
-			<button ng-click="removeStock()" type="button" class="btn btn-danger">Remove Stock</button>
+			<button ng-click="removeStock($index)" type="button" class="btn btn-danger">Remove Stock</button>
 		</a>
 	</div>
 </div>

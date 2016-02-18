@@ -2,8 +2,7 @@ app.controller('listCtrl', function($scope, $log, $state, Stocks) {
 	$log.info(Stocks.stockList);
 	$scope.stockList = Stocks.stockList;
 
-	$scope.removeStock = function() {
-		var index = $scope.stockList.indexOf(this.stock)
+	$scope.removeStock = function(index) {
 		$scope.stockList.splice(index, 1);
 	}
 })
