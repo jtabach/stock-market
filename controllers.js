@@ -23,6 +23,7 @@ app.controller('addCtrl', function($scope, $log, $state, Stocks) {
 		function addSelectedStock(res) {
 			$scope.selection = res.data;
 			Stocks.stockList.push($scope.selection);
+			$state.go('list');
 		}
 	}
 

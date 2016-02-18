@@ -1,10 +1,9 @@
-<link rel="stylesheet" href="style.css">
 <h2>Add Stocks To Track</h2>
 
 <form class="form-inline">
   <div class="form-group">
     <label for="nameStock">Stock:</label>
-    <input ng-keyup="findStock()" type="text" class="form-control" ng-model="nameStock" placeholder="Search for Stock">
+    <input ng-click="findStock()" type="text" class="form-control" ng-model="nameStock" placeholder="Search for Stock">
   </div>
   <button ng-click="findStock()" type="button" class="btn btn-success">Add Stock</button>
 </form>
