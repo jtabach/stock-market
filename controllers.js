@@ -1,7 +1,5 @@
 app.controller('listCtrl', function($scope, $log, $state, Stocks) {
-	$log.info(Stocks.stockList);
 	$scope.stockList = Stocks.stockList;
-
 	$scope.removeStock = function(index) {
 		$scope.stockList.splice(index, 1);
 	}
@@ -11,22 +9,25 @@ app.controller('addCtrl', function($scope, $log, $state, Stocks) {
 
 	$scope.findStock = function() {
 		Stocks.findByName($scope.nameStock)
-		.then(function(res) {
+		.then(getStocksByName, errorHandler);
+
+		function getStocksByName(res) {
 			$scope.stocks = res.data;
-		}, function(err) {
-			console.log('err:', err);
-		})
+		}
 	}
 
 	$scope.addStock = function(selectedStock) {
 		Stocks.findBySymbol(selectedStock.Symbol)
-		.then(function(res) {
+		.then(addSelectedStock, errorHandler);
+
+		function addSelectedStock(res) {
 			$scope.selection = res.data;
 			Stocks.stockList.push($scope.selection);
-			console.log($scope.selection);
-		}, function(err) {
-			console.log('err:', err);
-		})
+		}
+	}
+
+	function errorHandler(err) {
+		console.log('err:', err);
 	}
 
 })
